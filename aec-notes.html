@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEC – Communication Skills in English | Study Notes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg:        #0a0e17;
+            --surface:   #111827;
+            --card:      #1a2235;
+            --border:    #2a3a5c;
+            --accent:    #4f8ef7;
+            --gold:      #f5c842;
+            --green:     #22c55e;
+            --red:       #ef4444;
+            --text:      #e2e8f0;
+            --muted:     #94a3b8;
+            --radius:    12px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Rajdhani', 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        /* ── Header ── */
+        header {
+            background: linear-gradient(135deg, #0d1b2a 0%, #1a2a4a 100%);
+            border-bottom: 2px solid var(--accent);
+            padding: 32px 24px 24px;
+            text-align: center;
+        }
+
+        header .subject-tag {
+            display: inline-block;
+            background: rgba(79,142,247,.15);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 11px;
+            letter-spacing: 3px;
+            padding: 4px 14px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+        }
+
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.6rem, 5vw, 2.8rem);
+            font-weight: 900;
+            background: linear-gradient(90deg, var(--gold), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        /* ── Layout ── */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        /* ── Quick-nav ── */
+        .toc {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 36px;
+        }
+
+        .toc h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+
+        .toc ol {
+            columns: 2;
+            column-gap: 24px;
+            padding-left: 20px;
+        }
+
+        .toc ol li { margin-bottom: 6px; }
+        .toc ol li a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color .2s;
+        }
+        .toc ol li a:hover { color: var(--gold); }
+
+        /* ── Section cards ── */
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 28px 24px;
+            margin-bottom: 28px;
+            scroll-margin-top: 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 14px;
+        }
+
+        .section-num {
+            background: var(--accent);
+            color: #fff;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+        }
+
+        .section h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.5px;
+        }
+
+        .section h3 {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 18px 0 8px;
+        }
+
+        .section p { margin-bottom: 10px; color: var(--text); }
+
+        /* ── Lists ── */
+        ul.notes, ol.notes {
+            padding-left: 22px;
+            margin-bottom: 12px;
+        }
+        ul.notes li, ol.notes li {
+            margin-bottom: 6px;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        /* ── Highlight / key-term ── */
+        .key {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(79,142,247,.18);
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-size: 0.78rem;
+            padding: 2px 9px;
+            border-radius: 50px;
+            margin: 2px 3px;
+        }
+
+        /* ── Tip / Info boxes ── */
+        .tip {
+            background: rgba(34,197,94,.08);
+            border-left: 3px solid var(--green);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 14px 0;
+            font-size: 0.93rem;
+        }
+        .tip .label { color: var(--green); font-weight: 700; }
+
+        .warn {
+            background: rgba(245,200,66,.08);
+            border-left: 3px solid var(--gold);
+            border-radius: 0 8px 8px 0;
+            padding: 12px 16px;
+            margin: 14px 0;
+            font-size: 0.93rem;
+        }
+        .warn .label { color: var(--gold); font-weight: 700; }
+
+        /* ── Two-column table ── */
+        .def-table { width: 100%; border-collapse: collapse; margin: 12px 0; }
+        .def-table th, .def-table td {
+            text-align: left;
+            padding: 9px 12px;
+            border: 1px solid var(--border);
+            font-size: 0.92rem;
+        }
+        .def-table th {
+            background: rgba(79,142,247,.12);
+            color: var(--accent);
+            font-weight: 700;
+        }
+        .def-table tr:nth-child(even) td { background: rgba(255,255,255,.02); }
+
+        /* ── Quiz strip ── */
+        .quiz-strip {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .q-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-size: 0.88rem;
+        }
+        .q-card .q { color: var(--muted); margin-bottom: 4px; }
+        .q-card .a { color: var(--gold); font-weight: 600; }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: 24px;
+            color: var(--muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border);
+        }
+
+        @media (max-width: 600px) {
+            .toc ol { columns: 1; }
+            .section { padding: 20px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="subject-tag">AEC · RE-EXAM NOTES</div>
+    <h1>Communication Skills in English</h1>
+    <p>Complete revision notes · AEC Subject · All key topics covered</p>
+</header>
+
+<div class="container">
+
+    <!-- ─── TABLE OF CONTENTS ─── -->
+    <div class="toc">
+        <h2>📋 QUICK NAVIGATION</h2>
+        <ol>
+            <li><a href="#unit1">Communication – Basics &amp; Process</a></li>
+            <li><a href="#unit2">Types of Communication</a></li>
+            <li><a href="#unit3">Barriers to Communication</a></li>
+            <li><a href="#unit4">Listening Skills</a></li>
+            <li><a href="#unit5">Reading Skills</a></li>
+            <li><a href="#unit6">Writing Skills – Letters &amp; Emails</a></li>
+            <li><a href="#unit7">Report Writing</a></li>
+            <li><a href="#unit8">Presentation Skills</a></li>
+            <li><a href="#unit9">Group Discussion &amp; Interviews</a></li>
+            <li><a href="#unit10">Grammar Quick Reference</a></li>
+        </ol>
+    </div>
+
+    <!-- ─── UNIT 1 ─── -->
+    <div class="section" id="unit1">
+        <div class="section-header">
+            <div class="section-num">1</div>
+            <h2>Communication – Basics &amp; Process</h2>
+        </div>
+
+        <p><span class="key">Communication</span> is the process of exchanging information, ideas, thoughts, or feelings between two or more people through a common system of symbols, signs, or behaviour.</p>
+
+        <h3>Elements of the Communication Process</h3>
+        <table class="def-table">
+            <thead><tr><th>Element</th><th>Description</th></tr></thead>
+            <tbody>
+                <tr><td><span class="key">Sender</span></td><td>The person who initiates the message.</td></tr>
+                <tr><td><span class="key">Encoding</span></td><td>Converting thoughts into words/symbols.</td></tr>
+                <tr><td><span class="key">Message</span></td><td>The actual information being conveyed.</td></tr>
+                <tr><td><span class="key">Channel / Medium</span></td><td>The path through which the message travels (speech, email, letter, etc.).</td></tr>
+                <tr><td><span class="key">Decoding</span></td><td>Receiver interpreting the message.</td></tr>
+                <tr><td><span class="key">Receiver</span></td><td>The person who receives and understands the message.</td></tr>
+                <tr><td><span class="key">Feedback</span></td><td>The response sent back to the sender.</td></tr>
+                <tr><td><span class="key">Noise</span></td><td>Any disturbance that distorts the message.</td></tr>
+                <tr><td><span class="key">Context</span></td><td>The setting/environment of the communication.</td></tr>
+            </tbody>
+        </table>
+
+        <h3>7 Cs of Effective Communication</h3>
+        <ul class="notes">
+            <li><span class="key">Clear</span> – Use simple, precise language.</li>
+            <li><span class="key">Concise</span> – Avoid unnecessary words.</li>
+            <li><span class="key">Concrete</span> – Use specific facts and figures.</li>
+            <li><span class="key">Correct</span> – Grammar, facts and tone must be accurate.</li>
+            <li><span class="key">Coherent</span> – Logical flow of ideas.</li>
+            <li><span class="key">Complete</span> – All necessary information is included.</li>
+            <li><span class="key">Courteous</span> – Respectful, polite and considerate.</li>
+        </ul>
+
+        <div class="tip"><span class="label">✅ Exam Tip:</span> Questions on the 7 Cs are very common. Learn one short example for each C.</div>
+    </div>
+
+    <!-- ─── UNIT 2 ─── -->
+    <div class="section" id="unit2">
+        <div class="section-header">
+            <div class="section-num">2</div>
+            <h2>Types of Communication</h2>
+        </div>
+
+        <h3>A. Based on Mode</h3>
+        <table class="def-table">
+            <thead><tr><th>Type</th><th>Definition</th><th>Examples</th></tr></thead>
+            <tbody>
+                <tr><td><span class="key">Verbal</span></td><td>Using spoken or written words.</td><td>Speeches, letters, phone calls</td></tr>
+                <tr><td><span class="key">Non-verbal</span></td><td>Without words — body language, gestures.</td><td>Nodding, eye contact, posture</td></tr>
+                <tr><td><span class="key">Visual</span></td><td>Using images, charts, videos.</td><td>Graphs, presentations, signs</td></tr>
+            </tbody>
+        </table>
+
+        <h3>B. Based on Direction (Organisational)</h3>
+        <ul class="notes">
+            <li><span class="key">Downward</span> – From superior to subordinate (instructions, orders).</li>
+            <li><span class="key">Upward</span> – From subordinate to superior (reports, feedback).</li>
+            <li><span class="key">Horizontal / Lateral</span> – Between peers at the same level.</li>
+            <li><span class="key">Diagonal</span> – Across departments and levels.</li>
+        </ul>
+
+        <h3>C. Formal vs Informal</h3>
+        <table class="def-table">
+            <thead><tr><th></th><th>Formal</th><th>Informal</th></tr></thead>
+            <tbody>
+                <tr><td>Structure</td><td>Pre-defined channels</td><td>No fixed channel</td></tr>
+                <tr><td>Language</td><td>Official, professional</td><td>Casual, colloquial</td></tr>
+                <tr><td>Example</td><td>Official memo, business email</td><td>Conversation, social chat</td></tr>
+                <tr><td>Speed</td><td>Slower (official process)</td><td>Faster</td></tr>
+                <tr><td>Reliability</td><td>High, documented</td><td>May be distorted (grapevine)</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Non-verbal Communication – Body Language (KINESICS)</h3>
+        <ul class="notes">
+            <li><span class="key">Gestures</span> – Hand and arm movements.</li>
+            <li><span class="key">Facial expressions</span> – Smile, frown, raised eyebrows.</li>
+            <li><span class="key">Eye contact</span> – Shows attention and confidence.</li>
+            <li><span class="key">Posture</span> – Open vs closed body positions.</li>
+            <li><span class="key">Proxemics</span> – Use of personal space (intimate, personal, social, public).</li>
+            <li><span class="key">Paralanguage</span> – Tone, pitch, pace, volume of voice.</li>
+        </ul>
+    </div>
+
+    <!-- ─── UNIT 3 ─── -->
+    <div class="section" id="unit3">
+        <div class="section-header">
+            <div class="section-num">3</div>
+            <h2>Barriers to Communication</h2>
+        </div>
+
+        <p>Barriers are factors that prevent the effective exchange of ideas or information.</p>
+
+        <h3>Types of Barriers</h3>
+        <table class="def-table">
+            <thead><tr><th>Barrier</th><th>Cause</th><th>How to Overcome</th></tr></thead>
+            <tbody>
+                <tr>
+                    <td><span class="key">Physical / Environmental</span></td>
+                    <td>Noise, distance, poor technology</td>
+                    <td>Use appropriate channel; reduce noise</td>
+                </tr>
+                <tr>
+                    <td><span class="key">Linguistic / Semantic</span></td>
+                    <td>Different language, jargon, ambiguity</td>
+                    <td>Use simple, clear language; define terms</td>
+                </tr>
+                <tr>
+                    <td><span class="key">Psychological / Emotional</span></td>
+                    <td>Fear, stress, prejudice, poor listening</td>
+                    <td>Empathy, active listening, open mind</td>
+                </tr>
+                <tr>
+                    <td><span class="key">Cultural</span></td>
+                    <td>Different customs, values, interpretations</td>
+                    <td>Cultural awareness and sensitivity</td>
+                </tr>
+                <tr>
+                    <td><span class="key">Organisational</span></td>
+                    <td>Complex hierarchy, information overload</td>
+                    <td>Clear policies, flatten hierarchy</td>
+                </tr>
+                <tr>
+                    <td><span class="key">Perceptual</span></td>
+                    <td>Different viewpoints, stereotyping</td>
+                    <td>Active listening, avoid assumptions</td>
+                </tr>
+                <tr>
+                    <td><span class="key">Technological</span></td>
+                    <td>Poor connectivity, outdated equipment</td>
+                    <td>Upgrade tools, test before use</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="warn"><span class="label">📌 Remember:</span> Always give one example per barrier type in exam answers.</div>
+    </div>
+
+    <!-- ─── UNIT 4 ─── -->
+    <div class="section" id="unit4">
+        <div class="section-header">
+            <div class="section-num">4</div>
+            <h2>Listening Skills</h2>
+        </div>
+
+        <p><span class="key">Listening</span> is an active process of receiving, constructing meaning from, and responding to spoken messages.</p>
+
+        <h3>Types of Listening</h3>
+        <ul class="notes">
+            <li><span class="key">Active Listening</span> – Full concentration, understanding, responding.</li>
+            <li><span class="key">Passive Listening</span> – Hearing without much engagement (e.g., background music).</li>
+            <li><span class="key">Critical Listening</span> – Evaluating and analysing what is heard.</li>
+            <li><span class="key">Empathetic Listening</span> – Understanding the speaker's feelings.</li>
+            <li><span class="key">Discriminative Listening</span> – Distinguishing different sounds or tones.</li>
+            <li><span class="key">Informational Listening</span> – Listening to learn (lectures, instructions).</li>
+        </ul>
+
+        <h3>Barriers to Listening</h3>
+        <ul class="notes">
+            <li>External distractions / noise</li>
+            <li>Pre-judgement and bias</li>
+            <li>Information overload</li>
+            <li>Emotional state</li>
+            <li>Physical tiredness</li>
+        </ul>
+
+        <h3>Active Listening Skills (LADDER)</h3>
+        <ul class="notes">
+            <li><span class="key">L</span>ook at the speaker</li>
+            <li><span class="key">A</span>sk questions</li>
+            <li><span class="key">D</span>on't interrupt</li>
+            <li><span class="key">D</span>on't change the subject</li>
+            <li><span class="key">E</span>mpathise</li>
+            <li><span class="key">R</span>espond appropriately</li>
+        </ul>
+    </div>
+
+    <!-- ─── UNIT 5 ─── -->
+    <div class="section" id="unit5">
+        <div class="section-header">
+            <div class="section-num">5</div>
+            <h2>Reading Skills</h2>
+        </div>
+
+        <h3>Types of Reading</h3>
+        <table class="def-table">
+            <thead><tr><th>Type</th><th>Purpose</th></tr></thead>
+            <tbody>
+                <tr><td><span class="key">Skimming</span></td><td>Reading quickly for the gist / main idea.</td></tr>
+                <tr><td><span class="key">Scanning</span></td><td>Looking for specific information (dates, names).</td></tr>
+                <tr><td><span class="key">Intensive Reading</span></td><td>Close, careful reading for full comprehension.</td></tr>
+                <tr><td><span class="key">Extensive Reading</span></td><td>Reading large amounts for pleasure/general understanding.</td></tr>
+                <tr><td><span class="key">Critical Reading</span></td><td>Analysing and evaluating arguments in a text.</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Comprehension Techniques (SQ3R)</h3>
+        <ul class="notes">
+            <li><span class="key">S</span>urvey – Get an overview.</li>
+            <li><span class="key">Q</span>uestion – Ask questions before reading.</li>
+            <li><span class="key">R</span>ead – Read carefully.</li>
+            <li><span class="key">R</span>ecite – Summarise in own words.</li>
+            <li><span class="key">R</span>eview – Go back and check understanding.</li>
+        </ul>
+
+        <div class="tip"><span class="label">✅ Exam Tip:</span> For comprehension questions — always read the questions first, then skim the passage to locate answers.</div>
+    </div>
+
+    <!-- ─── UNIT 6 ─── -->
+    <div class="section" id="unit6">
+        <div class="section-header">
+            <div class="section-num">6</div>
+            <h2>Writing Skills – Letters &amp; Emails</h2>
+        </div>
+
+        <h3>Business Letter – Parts</h3>
+        <ol class="notes">
+            <li>Sender's Address</li>
+            <li>Date</li>
+            <li>Receiver's Address (Inside Address)</li>
+            <li>Subject Line</li>
+            <li>Salutation (Dear Sir/Madam)</li>
+            <li>Body (Opening ▸ Main Content ▸ Closing)</li>
+            <li>Complimentary Close (Yours faithfully / sincerely)</li>
+            <li>Signature &amp; Designation</li>
+            <li>Enclosures (if any)</li>
+        </ol>
+
+        <h3>Types of Business Letters</h3>
+        <ul class="notes">
+            <li><span class="key">Enquiry Letter</span> – Requesting information.</li>
+            <li><span class="key">Complaint Letter</span> – Reporting a problem.</li>
+            <li><span class="key">Adjustment Letter</span> – Responding to a complaint.</li>
+            <li><span class="key">Order Letter</span> – Placing an order.</li>
+            <li><span class="key">Sales Letter</span> – Promoting a product.</li>
+            <li><span class="key">Job Application Letter</span> – Applying for a position.</li>
+            <li><span class="key">Cover Letter</span> – Accompanying a résumé/CV.</li>
+        </ul>
+
+        <h3>Professional Email – Guidelines</h3>
+        <ul class="notes">
+            <li>Use a clear, specific <span class="key">Subject Line</span>.</li>
+            <li>Begin with a proper <span class="key">Salutation</span>.</li>
+            <li>Keep the body <span class="key">brief and focused</span>.</li>
+            <li>Use formal language; avoid slang or abbreviations.</li>
+            <li>End with a polite <span class="key">closing</span> (Regards / Best regards).</li>
+            <li>Include your full <span class="key">email signature</span>.</li>
+            <li>Proofread before sending.</li>
+        </ul>
+
+        <h3>Memo (Memorandum)</h3>
+        <p>A memo is an internal written communication used within an organisation.</p>
+        <ul class="notes">
+            <li><span class="key">TO:</span> Recipient(s)</li>
+            <li><span class="key">FROM:</span> Sender</li>
+            <li><span class="key">DATE:</span></li>
+            <li><span class="key">SUBJECT:</span></li>
+            <li>Body – concise, direct</li>
+        </ul>
+    </div>
+
+    <!-- ─── UNIT 7 ─── -->
+    <div class="section" id="unit7">
+        <div class="section-header">
+            <div class="section-num">7</div>
+            <h2>Report Writing</h2>
+        </div>
+
+        <p><span class="key">A Report</span> is a formal document that presents facts, findings, and recommendations on a specific topic.</p>
+
+        <h3>Types of Reports</h3>
+        <ul class="notes">
+            <li><span class="key">Informational Report</span> – Presents facts without analysis.</li>
+            <li><span class="key">Analytical Report</span> – Includes analysis, conclusions, and recommendations.</li>
+            <li><span class="key">Technical Report</span> – For engineering/scientific purposes.</li>
+            <li><span class="key">Progress Report</span> – Status of an ongoing project.</li>
+            <li><span class="key">Feasibility Report</span> – Assesses viability of a project.</li>
+        </ul>
+
+        <h3>Structure of a Formal Report</h3>
+        <ol class="notes">
+            <li>Title Page</li>
+            <li>Table of Contents</li>
+            <li>Abstract / Executive Summary</li>
+            <li>Introduction (Purpose, Scope, Background)</li>
+            <li>Methodology</li>
+            <li>Findings / Results</li>
+            <li>Discussion / Analysis</li>
+            <li>Conclusion</li>
+            <li>Recommendations</li>
+            <li>References / Bibliography</li>
+            <li>Appendices</li>
+        </ol>
+
+        <div class="warn"><span class="label">📌 Key Difference:</span> <span class="key">Abstract</span> = summary of the whole report. <span class="key">Introduction</span> = background and purpose only.</div>
+    </div>
+
+    <!-- ─── UNIT 8 ─── -->
+    <div class="section" id="unit8">
+        <div class="section-header">
+            <div class="section-num">8</div>
+            <h2>Presentation Skills</h2>
+        </div>
+
+        <h3>Stages of a Presentation</h3>
+        <table class="def-table">
+            <thead><tr><th>Stage</th><th>What to Do</th></tr></thead>
+            <tbody>
+                <tr><td><span class="key">Introduction</span></td><td>Greet, introduce yourself, state topic and objectives.</td></tr>
+                <tr><td><span class="key">Body</span></td><td>Present main points clearly with transitions.</td></tr>
+                <tr><td><span class="key">Conclusion</span></td><td>Summarise, give final message, invite questions.</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Effective Presentation Tips</h3>
+        <ul class="notes">
+            <li>Know your audience and purpose.</li>
+            <li>Use the <span class="key">Rule of Three</span> – limit to 3 main points.</li>
+            <li>Maintain <span class="key">eye contact</span> with the audience.</li>
+            <li>Use <span class="key">clear visuals</span> (not too much text on slides).</li>
+            <li>Vary your <span class="key">tone and pace</span>; avoid monotone delivery.</li>
+            <li>Handle questions confidently; say "Good question" to buy time.</li>
+            <li>Practice the <span class="key">KISS principle</span> – Keep It Short and Simple.</li>
+        </ul>
+
+        <h3>Slide Design Best Practices</h3>
+        <ul class="notes">
+            <li>Max 6–7 lines per slide; max 7 words per line.</li>
+            <li>Use high-contrast colours and readable fonts.</li>
+            <li>One idea per slide.</li>
+            <li>Use graphs/images instead of dense text.</li>
+        </ul>
+    </div>
+
+    <!-- ─── UNIT 9 ─── -->
+    <div class="section" id="unit9">
+        <div class="section-header">
+            <div class="section-num">9</div>
+            <h2>Group Discussion &amp; Interviews</h2>
+        </div>
+
+        <h3>Group Discussion (GD)</h3>
+        <p>A GD is a structured discussion among a group of candidates assessed by evaluators.</p>
+
+        <h3>Do's in a GD</h3>
+        <ul class="notes">
+            <li>Initiate if you have good knowledge of the topic.</li>
+            <li>Speak clearly and confidently.</li>
+            <li>Listen actively and build on others' points.</li>
+            <li>Maintain positive body language.</li>
+            <li>Summarise at the end if asked.</li>
+        </ul>
+
+        <h3>Don'ts in a GD</h3>
+        <ul class="notes">
+            <li>Don't interrupt or talk over others.</li>
+            <li>Don't monopolise the discussion.</li>
+            <li>Don't use aggressive or dismissive language.</li>
+            <li>Don't go off-topic.</li>
+        </ul>
+
+        <h3>Job Interview Skills</h3>
+        <h3>Types of Interview Questions</h3>
+        <table class="def-table">
+            <thead><tr><th>Type</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td><span class="key">Open-ended</span></td><td>"Tell me about yourself."</td></tr>
+                <tr><td><span class="key">Closed / Direct</span></td><td>"Do you have a degree in CS?"</td></tr>
+                <tr><td><span class="key">Behavioural</span></td><td>"Describe a time you solved a conflict."</td></tr>
+                <tr><td><span class="key">Situational</span></td><td>"What would you do if…?"</td></tr>
+                <tr><td><span class="key">Technical</span></td><td>Domain-specific knowledge questions</td></tr>
+                <tr><td><span class="key">Stress</span></td><td>Designed to test composure under pressure</td></tr>
+            </tbody>
+        </table>
+
+        <h3>STAR Technique (Answering Behavioural Questions)</h3>
+        <ul class="notes">
+            <li><span class="key">S</span>ituation – Describe the context.</li>
+            <li><span class="key">T</span>ask – Explain your responsibility.</li>
+            <li><span class="key">A</span>ction – Describe what you did.</li>
+            <li><span class="key">R</span>esult – State the outcome.</li>
+        </ul>
+
+        <div class="tip"><span class="label">✅ Interview Etiquette:</span> Dress formally, arrive early, carry extra copies of your CV, maintain eye contact, and send a thank-you note afterwards.</div>
+    </div>
+
+    <!-- ─── UNIT 10 ─── -->
+    <div class="section" id="unit10">
+        <div class="section-header">
+            <div class="section-num">10</div>
+            <h2>Grammar Quick Reference</h2>
+        </div>
+
+        <h3>Tense Overview</h3>
+        <table class="def-table">
+            <thead><tr><th>Tense</th><th>Structure</th><th>Example</th></tr></thead>
+            <tbody>
+                <tr><td>Simple Present</td><td>S + V1 (s/es)</td><td>She <em>writes</em> reports.</td></tr>
+                <tr><td>Present Continuous</td><td>S + is/am/are + V-ing</td><td>She <em>is writing</em> a report.</td></tr>
+                <tr><td>Present Perfect</td><td>S + has/have + V3</td><td>She <em>has written</em> the report.</td></tr>
+                <tr><td>Simple Past</td><td>S + V2</td><td>She <em>wrote</em> a report.</td></tr>
+                <tr><td>Past Continuous</td><td>S + was/were + V-ing</td><td>She <em>was writing</em> a report.</td></tr>
+                <tr><td>Simple Future</td><td>S + will + V1</td><td>She <em>will write</em> a report.</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Active vs Passive Voice</h3>
+        <table class="def-table">
+            <thead><tr><th>Active</th><th>Passive</th></tr></thead>
+            <tbody>
+                <tr><td>The manager <em>approved</em> the report.</td><td>The report <em>was approved</em> by the manager.</td></tr>
+                <tr><td>They <em>are building</em> a new office.</td><td>A new office <em>is being built</em>.</td></tr>
+                <tr><td>She <em>will send</em> the email.</td><td>The email <em>will be sent</em> by her.</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Common Prepositions in Business English</h3>
+        <div class="quiz-strip">
+            <div class="q-card"><div class="q">Refer __ a document</div><div class="a">to</div></div>
+            <div class="q-card"><div class="q">In accordance __ the policy</div><div class="a">with</div></div>
+            <div class="q-card"><div class="q">On behalf __</div><div class="a">of</div></div>
+            <div class="q-card"><div class="q">With regard __</div><div class="a">to</div></div>
+            <div class="q-card"><div class="q">Comply __ the rules</div><div class="a">with</div></div>
+            <div class="q-card"><div class="q">Respond __ an email</div><div class="a">to</div></div>
+        </div>
+
+        <h3>Commonly Confused Words</h3>
+        <table class="def-table">
+            <thead><tr><th>Pair</th><th>Difference</th></tr></thead>
+            <tbody>
+                <tr><td><span class="key">Affect / Effect</span></td><td><em>Affect</em> (verb) = to influence. <em>Effect</em> (noun) = result.</td></tr>
+                <tr><td><span class="key">Their / There / They're</span></td><td>Possession / Place / They are</td></tr>
+                <tr><td><span class="key">Principal / Principle</span></td><td>Head / Basic rule or belief</td></tr>
+                <tr><td><span class="key">Complement / Compliment</span></td><td>Complete / Praise</td></tr>
+                <tr><td><span class="key">Enquire / Inquire</span></td><td>British (general ask) / American (formal investigation)</td></tr>
+                <tr><td><span class="key">Advice / Advise</span></td><td>Noun / Verb</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Formal vs Informal Vocabulary</h3>
+        <table class="def-table">
+            <thead><tr><th>Informal</th><th>Formal Equivalent</th></tr></thead>
+            <tbody>
+                <tr><td>find out</td><td>ascertain / determine</td></tr>
+                <tr><td>get</td><td>obtain / receive</td></tr>
+                <tr><td>need</td><td>require</td></tr>
+                <tr><td>tell</td><td>inform / notify</td></tr>
+                <tr><td>start</td><td>commence / initiate</td></tr>
+                <tr><td>end</td><td>conclude / terminate</td></tr>
+                <tr><td>use</td><td>utilise / employ</td></tr>
+                <tr><td>show</td><td>demonstrate / illustrate</td></tr>
+                <tr><td>help</td><td>assist / facilitate</td></tr>
+                <tr><td>buy</td><td>purchase / procure</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip"><span class="label">✅ Last-Minute Tip:</span> For <strong>any writing task</strong> in the exam — plan (1 min), draft, then review for grammar. Always write a clear topic sentence for each paragraph.</div>
+    </div>
+
+</div><!-- /container -->
+
+<footer>
+    AEC – Communication Skills in English · Revision Notes · Good luck on your re-exam! 🍀
+</footer>
+
+</body>
+</html>
