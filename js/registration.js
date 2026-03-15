@@ -77,7 +77,7 @@ class Registration {
                 players.push({ name, color: this.playerColors[i] });
             }
 
-            if (this.onStart) {
+            if (typeof this.onStart === 'function') {
                 this.onStart(players);
             }
         });

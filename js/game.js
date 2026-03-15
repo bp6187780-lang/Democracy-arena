@@ -155,12 +155,18 @@ class Game {
         if (this.finished) return;
 
         let next = (this.currentTurn + 1) % this.players.length;
-        // Skip eliminated players (not used in current rules, but safe)
         let attempts = 0;
         while (this.players[next].eliminated && attempts < this.players.length) {
             next = (next + 1) % this.players.length;
             attempts++;
         }
+
+        // If all players are eliminated, end the game
+        if (attempts >= this.players.length) {
+            this.finished = true;
+            return;
+        }
+
         this.currentTurn = next;
 
         if (this.onUpdate) this.onUpdate();

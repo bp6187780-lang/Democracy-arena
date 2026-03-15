@@ -59,8 +59,9 @@ class GameScene {
         // Background particles
         this.createParticles();
 
-        // Window resize
-        window.addEventListener('resize', () => this.onResize());
+        // Window resize (store bound handler for proper removal)
+        this._onResizeBound = () => this.onResize();
+        window.addEventListener('resize', this._onResizeBound);
 
         // Start render loop
         this.animate();
@@ -201,7 +202,9 @@ class GameScene {
 
     destroy() {
         if (this.animationId) cancelAnimationFrame(this.animationId);
-        window.removeEventListener('resize', this.onResize);
+        if (this._onResizeBound) {
+            window.removeEventListener('resize', this._onResizeBound);
+        }
     }
 }
 
