@@ -1,0 +1,17 @@
+{
+  "name": "democracy-arena",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Production-quality hexagonal board game with mobile-first responsive design",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "terser": "^5.46.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.11"
+  }
+}
